@@ -9,7 +9,7 @@ while True:
             if my_list[ind] < num:
                 pos = ind
                 break
-        my_list.append(float(num)) if pos == 0 else my_list.insert(pos, float(num))
+        my_list.append(float(num)) if (pos == 0 and num < my_list[len(my_list) - 1]) else my_list.insert(pos, float(num))
         break
     else:
         print('Нужно ввести натуральное число!')
